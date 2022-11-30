@@ -12,7 +12,10 @@ const ProductCard = ({ product }) => {
     const { pathname } = useLocation();
 
     return (
-        <div className='shadow-lg rounded-3xl border  p-3 flex flex-col text-indigo-900'>
+        <div className='shadow-lg relative rounded-3xl border  p-3 flex flex-col text-indigo-900'>
+            {pathname.includes('cart') && <div className='grid place-items-center bg-indigo-500 text-white rounded-full absolute top-1 right-1 h-8 w-8'>
+                <p>{product.quantity}</p>
+            </div>}
             <div className='h-52 w-52 mx-auto'>
                 <img src={product.image} alt="" />
             </div>
