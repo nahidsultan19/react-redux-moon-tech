@@ -1,9 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
-import Main from "../layout/Main";
-import About from "../pages/About";
-import Cart from "../pages/Cart";
-import Home from "../pages/Home";
-import TopRated from "../pages/TopRated";
+import Main from "../layout/Main/Main";
+import About from "../pages/Main/About";
+import Cart from "../pages/Main/Cart";
+import Home from "../pages/Main/Home";
+import TopRated from "../pages/Main/TopRated";
 
 
 const routes = createBrowserRouter([
