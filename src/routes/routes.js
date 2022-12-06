@@ -1,5 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
+import Dashboard from "../layout/Dashboard/Dashboard";
 import Main from "../layout/Main/Main";
+import AddProduct from "../pages/Dashboard/AddProduct";
+import ProductList from "../pages/Dashboard/ProductList";
 import About from "../pages/Main/About";
 import Cart from "../pages/Main/Cart";
 import Home from "../pages/Main/Home";
@@ -28,6 +31,20 @@ const routes = createBrowserRouter([
                 element: <Cart />
             }
         ]
+    },
+    {
+        path: 'dashboard',
+        element: <Dashboard />,
+        children: [
+            {
+                path: 'dashboard',
+                element: <ProductList />
+            },
+            {
+                path: 'add-product',
+                element: <AddProduct />,
+            },
+        ],
     },
 
 ]);
